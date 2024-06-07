@@ -1,0 +1,117 @@
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.range-slider {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    color: antiquewhite;
+    margin: 1em auto;
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    max-width: 30em;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.5em;
+    outline: none;
+    border-radius: 3px;
+    background: black;
+    box-shadow: inset 3px 3px 6px #000,
+    1px 1px 1px #909090;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    z-index: 3;
+    position: relative;
+}
+
+.progress {
+    width: 0;
+    height: 0.4em;
+    border-radius: 3px;
+    background: repeating-linear-gradient(90deg, #55e0ff, #3193fc, #000dff 1px, #000dff 40px) no-repeat 50% 50%;
+    /*background: repeating-linear-gradient(90deg, #e4e4e4, #777 1px, #000dff 1px, #000dff 40px) no-repeat 50% 50%;*/
+
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    left: 0;
+    pointer-events: none;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-thumb {
+
+
+}
+
+input[type='range']::-webkit-slider-thumb {
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    box-sizing: border-box;
+    padding: 0px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid;
+    background: #EEE;
+}
+
+
+.slider-values {
+    margin: 0;
+    width: 41%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-input {
+}
+
+.number-input {
+    background: none;
+    color: aliceblue;
+    width: 4em;
+    border: 1px #909090 solid;
+    border-radius: 4px;
+}
+
+.range-slider:hover .progress {
+
+    box-shadow: 0 0 1em #55e0ff;
+}
+
+
+/*qwdq*/
+
